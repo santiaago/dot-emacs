@@ -4,7 +4,9 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
-(load-theme 'zenburn t)
+
+(load-theme 'solarized-dark t)
+;;(load-theme 'zenburn t)
 
 ;; set full screen here
 
@@ -20,3 +22,14 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
+
+;; no tool bar
+(tool-bar-mode 0)
+;; match parentesis
+(show-paren-mode t)
+
+;;size of screen
+(if (window-system)
+  (set-frame-height (selected-frame) 60))
+(if (window-system)
+(set-frame-width (selected-frame) 124))
