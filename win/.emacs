@@ -8,7 +8,8 @@
 (load-theme 'solarized-dark t)
 ;;(load-theme 'zenburn t)
 
-;; set full screen here
+;;comment region
+(global-set-key [?\C-x?\C-\;] 'comment-or-uncomment-region)
 
 ;; ido mode
 (require 'ido)
